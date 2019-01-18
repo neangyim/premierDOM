@@ -1,63 +1,32 @@
+document.getElementById('root').innerHTML= 'Hello world';
+var neangUL =document.createElement('ul');
+var div =document.getElementById('root');
+div.appendChild(neangUL);
 
 
-document.getElementById("root").innerHTML="Bonjour je m'appelle Yim";
-//crée la balise UL
-var newUL = document.createElement('ul');
+var boite =["F","S","B","O","C",];
 
-var div = document.getElementById("root");
-//ajouter la balise ul
-div.appendChild(newUL);
+for (var x = 0;x<boite.length;x++){
+	
+	var sreyLI = document.createElement('li');
 
-//crée une balise LI
-var newli = document.createElement('li');
-newli.innerHTML = "Poi";
-newUL.appendChild(newli);
+	neangUL.appendChild(sreyLI).innerHTML=boite[x];
 
-var newli2 = document.createElement('li');
-newli2.innerHTML = "Fraise";
-newUL.appendChild(newli2);
-
-var newli3 =document.createElement('li');
-newli3.innerHTML ="Pomme";
-newUL.appendChild(newli3);
-
-var newli4 =document.createElement('li');
-newli4.innerHTML ="Bannane";
-newUL.appendChild(newli4);
-
-var newli5 =document.createElement('li');
-newli5.innerHTML="Cerise";
-newUL.appendChild(newli5);
-
-function myFuntion() {
-	var txt;
-	var person  = prompt ("entrez votre nom" ,);
-	if (person ==null || person ==""){
-		txt="Au revoir";
-		
-	}
-	else{
-		txt = "Bonjour,je m'appelle " + person ;
-	}
-	document.getElementById("pop").innerHTML=txt;
 }
 
 
 
+var button = document.createElement('input');
+button.type="button";
+button.value='Hello';
+div.appendChild(button);
 
-
-
-
-
-/*
-
-var div = document.getElementById('root');
-div.appendChild(newUL);
-
-div.appendChild(li);
-var arrword ={'temi1','temi2','temi3','temi4','temi5'}
-for (var i = 0 ; i <arrword.length; i++){
-		newDiv.appendChild(i)
-li.innerhtml = arrword(i);
+function pp(){
+	var prenom=prompt (' Qul est votre nom ');
+	if (prenom === null || prenom == ''){
+		alert('error')
+	}
+	else alert('Bonjour je m\'appelle'+prenom);
 }
-*/
+
+button.addEventListener('click', pp);
